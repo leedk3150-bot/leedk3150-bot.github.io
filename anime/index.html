@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anime Pocha | 애니메이션과 함께하는 시간</title><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #08090b; color: #eee; font-family: "Noto Sans KR", sans-serif; }
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; }
+header { display: flex; align-items: center; gap: 30px; padding: 18px 3%; background: #050505; }
+.logo { color: #ff8500; font-size: 26px; font-weight: 700; white-space: nowrap; }
+nav { display: flex; gap: 24px; font-size: 13px; }
+.utility { margin-left: auto; display: flex; align-items: center; gap: 26px; }
+.login { color: #ff8500; font-size: 13px; }
+.wrap, .ranking, .figure-banner, .scene, .membership-banner { width: 94%; max-width: 1400px; margin: 0 auto; }
+.wrap { padding-top: 38px; }
+.title { display: flex; align-items: center; gap: 20px; }
+h2 { font-size: 22px; }
+.upload { padding: 5px 14px; border: 1px solid #777; border-radius: 12px; color: #bbb; font-size: 12px; }
+.day-buttons { display: flex; gap: 16px; margin: 20px 0; }
+.day-buttons span { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: #292929; font-weight: 700; }
+.day-buttons .active, .rank-tabs .active { color: #111; background: #ff8500; }
+.daily-new-list { display: flex; gap: 12px; }
+.card { flex: 1; min-width: 0; }
+.card img { aspect-ratio: 2 / 3; object-fit: cover; border: 1px solid #444; border-radius: 7px; }
+.card h3 { margin: 10px 0 5px; font-size: 14px; }
+.card p, .card-copy p { color: #aaa; font-size: 12px; }
+.ranking { padding-top: 48px; }
+.rank-tabs { display: flex; gap: 12px; margin-bottom: 24px; }
+.rank-tabs span { padding: 7px 20px; border-radius: 24px; background: #292929; font-size: 14px; font-weight: 700; }
+.ranking-list { display: flex; gap: 10px; }
+.ranking-card { flex: 1; min-width: 0; }
+.ranking-card .photo { aspect-ratio: 0.57; object-fit: cover; border: 1px solid #444; border-radius: 6px; }
+.card-copy h3 { margin: 8px 0 6px; font-size: 12px; }
+.figure-banner { margin-top: 60px; }
+.figure-banner img { border-radius: 14px; }
+.scene { margin-top: 46px; }
+.scene-list { display: flex; gap: 8px; }
+.scene-card { flex: 1; min-width: 0; }
+.scene-card .photo { aspect-ratio: 1.35; object-fit: cover; border: 1px solid #444; border-radius: 7px; }
+.membership-banner { margin-top: 40px; }
+.membership-banner img { border: 1px solid #ff8500; border-radius: 10px; }
+footer { width: 94%; max-width: 1400px; margin: 32px auto; padding: 0 6px 12px; }
+.footer-logo { font-size: 17px; font-weight: 700; }
+.footer-info { color: #aaa; font-size: 12px; }
+.footer-info p { margin-top: 8px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 18px; }
+@media (max-width: 700px) {
+ header { flex-wrap: wrap; gap: 16px; }
+ .logo { font-size: 22px; }
+ nav { order: 3; width: 100%; justify-content: space-between; gap: 10px; font-size: 12px; }
+ .utility { gap: 16px; }
+ .day-buttons { gap: 10px; }
+ .day-buttons span { width: 36px; height: 36px; }
+ .daily-new-list, .ranking-list, .scene-list { flex-wrap: wrap; gap: 18px 3%; }
+ .card, .scene-card { flex: none; width: 31.3%; }
+ .ranking-card { flex: none; width: 22.75%; }
+ .rank-tabs span { padding: 7px 15px; }
+ .figure-banner { margin-top: 36px; }
+ .scene, .membership-banner { margin-top: 28px; }
+ .footer-links { gap: 12px 18px; }
+}</style></head>
+<body>
+    <header id="hero">
+ <a class="logo" href="#hero">anime Pocha</a>
+ <nav aria-label="주요 메뉴"><a href="#ranking">태그검색</a><a href="#daily">요일별 신작</a><a href="#membership-banner">멤버십</a><a href="#figure-banner">스토어</a><a href="#scene">이벤트</a></nav>
+ <div class="utility"><a href="#ranking" aria-label="검색"><i class="fa-solid fa-magnifying-glass"></i></a><a class="login" href="#membership-banner">로그인/가입</a></div>
+</header>
+<div class="hero"><img src="img/hero.png" alt="20세기 최고의 명작 작품, 카우보이 씨뿔"></div>
+<section class="wrap" id="daily">
+        <div class="title">
+<h2>요일별 신작</h2>
+<span class="upload">업데이트 공지</span>
+        </div>
+        <div class="day-buttons">
+        <span>월</span>                 <span>화</span>
+        <span>수</span>                 <span>목</span>
+        <span class="active">금</span>
+        <span>토</span>                 <span>일</span>
+
+        </div>
+
+            <div class="daily-new-list">
+                <div class="card"><img src="img/a.png" alt="번개 수사팀: 네온 제로"><h3>번개 수사팀: 네온 제로</h3><p>추리 · 액션</p></div>
+                <div class="card"><img src="img/dust.png" alt="사막의 유물 사냥꾼"><h3>사막의 유물 사냥꾼</h3><p>모험 · 판타지</p></div>
+                <div class="card"><img src="img/c.png" alt="환영 극장 마기아"><h3>환영 극장 마기아</h3><p>판타지 · 미스터리</p></div>
+                <div class="card"><img src="img/d.png" alt="청춘 탐정 사무소"><h3>청춘 탐정 사무소</h3><p>학원 · 미스터리</p></div>
+                <div class="card"><img src="img/ice.png" alt="빙원의 수호자"><h3>빙원의 수호자</h3><p>판타지 · 액션</p></div>
+                <div class="card"><img src="img/seadow.png" alt="청동기의 그림자"><h3>청동기의 그림자</h3><p>역사 · 모험</p></div>
+            </div>
+    </section>
+  <section class="ranking" id="ranking">
+    <div class="rank-tabs" aria-label="인기 애니메이션 순위"><span>실시간</span><span>주간</span><span>분기</span><span class="active">역대</span></div>
+    <div class="ranking-list">
+      <div class="ranking-card">
+        <div class="image-box"><img class="photo" src="img/red moon.png" alt="1. 붉은 달의 계약" loading="lazy"></div>
+        <div class="card-copy"><h3>1. 붉은 달의 계약</h3><p>인기 애니메이션</p></div>
+      </div>
+      <div class="ranking-card">
+        <div class="image-box"><img class="photo" src="img/green.png" alt="2. 그린 코드" loading="lazy"></div>
+        <div class="card-copy"><h3>2. 그린 코드</h3><p>인기 애니메이션</p></div>
+      </div>
+      <div class="ranking-card">
+        <div class="image-box"><img class="photo" src="img/weend.png" alt="3. 바람의 항로" loading="lazy"></div>
+        <div class="card-copy"><h3>3. 바람의 항로</h3><p>인기 애니메이션</p></div>
+      </div>
+      <div class="ranking-card">
+        <div class="image-box"><img class="photo" src="img/star.png" alt="4. 별빛 도시 레퀴엠" loading="lazy"></div>
+        <div class="card-copy"><h3>4. 별빛 도시 레퀴엠</h3><p>인기 애니메이션</p></div>
+      </div>
+      <div class="ranking-card">
+        <div class="image-box"><img class="photo" src="img/das.png" alt="5. 황혼의 수련장" loading="lazy"></div>
+        <div class="card-copy"><h3>5. 황혼의 수련장</h3><p>인기 애니메이션</p></div>
+      </div>
+      <div class="ranking-card">
+        <div class="image-box"><img class="photo" src="img/cave.png" alt="6. 요정의 동굴" loading="lazy"></div>
+        <div class="card-copy"><h3>6. 요정의 동굴</h3><p>인기 애니메이션</p></div>
+      </div>
+      <div class="ranking-card">
+        <div class="image-box"><img class="photo" src="img/sea.png" alt="7. 심해의 기억" loading="lazy"></div>
+        <div class="card-copy"><h3>7. 심해의 기억</h3><p>인기 애니메이션</p></div>
+      </div>
+      <div class="ranking-card">
+        <div class="image-box"><img class="photo" src="img/i.png" alt="8. 아이언 콜로니" loading="lazy"></div>
+        <div class="card-copy"><h3>8. 아이언 콜로니</h3><p>인기 애니메이션</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="figure-banner" id="figure-banner">
+    <a href="#figure-banner"><img src="img/jojo.png" alt="피규어 (메가톤맨) 조조찬 스타, 283,000원" loading="lazy"></a></section>
+  <section class="scene" id="scene">
+    
+    <div class="scene-list">
+      <div class="scene-card">
+        <div class="image-box"><img class="photo" src="img/camp.png" alt="야영" loading="lazy"></div>
+        
+      </div>
+      <div class="scene-card">
+        <div class="image-box"><img class="photo" src="img/neon.png" alt="네온 도시" loading="lazy"></div>
+        
+      </div>
+      <div class="scene-card">
+        <div class="image-box"><img class="photo" src="img/robot.png" alt="골목 로봇" loading="lazy"></div>
+        
+      </div>
+      <div class="scene-card">
+        <div class="image-box"><img class="photo" src="img/forest.png" alt="숲속 탐험" loading="lazy"></div>
+        
+      </div>
+      <div class="scene-card">
+        <div class="image-box"><img class="photo" src="img/moon.png" alt="달빛 숲" loading="lazy"></div>
+        
+      </div>
+      <div class="scene-card">
+        <div class="image-box"><img class="photo" src="img/e.png" alt="옥상 추격" loading="lazy"></div>
+        
+      </div>
+    </div>
+  </section>
+  <section class="membership-banner" id="membership-banner">
+    <a href="#membership-banner"><img src="img/member.png" alt="멤버십 이용자라면 애니 포차 TV앱으로도 웅장하게 즐겨보세요!" loading="lazy"></a></section>
+  <footer>
+ <div class="footer-logo">anime Pocha</div>
+ <div class="footer-info">
+  <p>사업자 정보</p>
+  <div class="footer-links"><a href="#hero">회사소개</a><a href="#customer">고객센터</a><a href="#customer">공지사항</a><a href="#terms">이용약관</a><a href="#privacy">청소년보호정책</a><a href="#privacy">개인정보 처리방침</a><a href="#terms">저작권 표기</a></div>
+  <p id="customer">고객센터 · 서비스 문의</p>
+  <p id="terms">© anime Pocha. All rights reserved.</p>
+  <p id="privacy">본 페이지는 웹디자인 실습용입니다.</p>
+ </div>
+</footer>
+</body>
+
+</html>
